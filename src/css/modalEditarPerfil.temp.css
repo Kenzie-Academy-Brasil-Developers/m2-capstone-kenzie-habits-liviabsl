@@ -32,6 +32,7 @@
 .close {
   width: 0.7rem;
   height: 0.7rem;
+  cursor: pointer;
 }
 
 .editarPerfilFomulario {
@@ -54,6 +55,7 @@
   padding: 9px, 18px, 9px, 18px;
   background-color: #f1f3f5;
   margin-bottom: 1.5rem;
+  outline-color: #a0adf9;
 }
 
 .btn {
@@ -63,4 +65,12 @@
   color: #fff;
   background-color: #a0adf9;
   border-radius: 0.25rem;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #4150d2;
+  border-radius: 0.25rem;
+  color: #fff;
+  box-shadow: 0 0 1em rgba(180, 180, 180, 0.8);
 }
