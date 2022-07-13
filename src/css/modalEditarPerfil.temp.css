@@ -6,25 +6,61 @@
   background-color: #ecf0f1;
 }
 
+.first_content {
+  display: flex;
+  flex-direction: column;
+  width: 31.375rem;
+  height: 21.8125rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.title-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 2rem;
+  margin-right: 2.625rem;
+  margin-top: 2.375rem;
+}
+
 .profile {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
 .close {
+  width: 0.7rem;
+  height: 0.7rem;
 }
 
 .editarPerfilFomulario {
-}
-
-.name {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.3125rem;
+  margin-left: 2rem;
+  margin-right: 2.625rem;
 }
 
 .label {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
 }
 
 .input {
+  width: 27.375rem;
+  height: 2.5rem;
+  padding: 9px, 18px, 9px, 18px;
+  background-color: #f1f3f5;
+  margin-bottom: 1.5rem;
 }
 
 .btn {
+  width: 27.375rem;
+  height: 2.5rem;
+  padding: 12px, 50px, 12px, 50px;
+  color: #fff;
+  background-color: #a0adf9;
+  border-radius: 0.25rem;
 }
