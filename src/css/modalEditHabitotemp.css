@@ -1,0 +1,191 @@
+body {
+    background-color: black;
+    font-family: 'Inter';
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+form div {
+    padding: 2px 0px;
+    border: 0px solid none;
+    border-radius: 0.3125rem;
+}
+
+label {
+    margin: 0;
+    padding: 0.3125rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+}
+
+input {
+    border-radius: 0.3125rem;
+    margin: 0;
+    width: 27.375rem;
+    background-color: #F1F3F5;
+    border: 2px solid #F1F3F5;
+    border-radius: 0.25rem;
+}
+
+select {
+    margin: 0 auto;
+    width: 27.375rem;
+    height: 2.1875rem;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    width: 11.9375rem;
+    height: 2.5rem;
+}
+
+.modal {
+    margin: 0;
+    width: 31.375rem;
+    height: 34.375rem;
+    border-radius: 0.5rem;
+
+}
+
+.modal-titulo-header {
+    margin-top: 1.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 1.2rem;
+}
+
+.modal-titulo-header h1 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+
+}
+
+
+.modal-titulo-header span {
+    color: #ADB5BD;
+}
+
+.modal_titulo {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
+
+}
+
+.modal_titulo input {
+    height: 2.1875rem;
+}
+
+.modal_descricao {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
+    margin-top: 0.875rem;
+}
+
+.modal_descricao input {
+    height: 4.7rem;
+}
+
+.modal_categoria {
+    width: 90%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 1.6rem;
+
+}
+
+.modal_categoria select {
+    height: 2.5rem;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+
+select {
+    width: 100%;
+    margin: 0;
+    background-color: #F1F3F5;
+    border: 2px solid #F1F3F5;
+    border-radius: 4px;
+}
+
+.modal_status {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.75rem;
+
+}
+
+.modal_status label {
+    font-size: 16ox;
+    font-weight: 600;
+    font-style: bold;
+}
+
+.modal_status .inputCheck {
+    width: 1.0625rem;
+    height: 0.9375rem;
+}
+
+
+.modal_buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    color: #343A40;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    margin-top: 1.875rem;
+}
+
+.modal_buttons .modal_buttons_buttonExcluir {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    width: 11.9375rem;
+    height: 2.5rem;
+    background-color: #F1F3F5;
+    border: 2px solid #F1F3F5;
+    border-radius: 4px;
+}
+
+.modal_buttons .modal_buttons_buttonSalvar {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    width: 14.9375rem;
+    height: 2.5rem;
+    background-color: #A0ADF9;
+    color: white;
+    border: 0px solid none;
+    border: 2px solid #F1F3F5;
+    border-radius: 4px;
+}
