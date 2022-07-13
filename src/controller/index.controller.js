@@ -2,7 +2,7 @@ import LoginResquest from "./login.controller.js";
 
 export default class LoginDOM {
   static getLogin() {
-    const botaoEntrar = document.querySelector(".btn_entrar");
+    const botaoEntrar = document.querySelector(".btn_getIn");
 
     botaoEntrar.addEventListener("click", async (e) => {
       e.preventDefault();
