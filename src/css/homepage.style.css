@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.header-container {
+  max-width: 100%;
+  display: flex;
+  height: 3.625rem;
+  background-color: #FFFFFF;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.25rem;
+}
+
+@media screen and (min-width: 576px) {
+  .header-container {
+    padding: 0 18.75%
+  }
+}
+
+.header-container > p {
+  font-weight: 700;
+  color: #415AF3;
+}
+
+.header-container > img {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: 0.125rem solid #415AF3;
+}
+
+.user-section {
+  max-width: 100%;
+  height: 7.813rem;
+  display: flex;
+  background-color: #415AF3;
+  padding-left: 1.25rem;
+  gap: 1.125rem;
+  align-items: center;
+}
+
+@media screen and (min-width: 576px) {
+  .user-section {
+    padding: 0 18.75%;
+  }
+}
+
+.user-section > img {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  border: 0.125rem solid #FFFFFF;
+}
+
+@media screen and (max-width: 575px) {
+  .user-section > img {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.user-section > p {
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 1.25rem;
+}
+
+.main-container {
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  margin: 3.625rem auto 2.125rem;
+}
+
+@media screen and (min-width: 576px) {
+  .main-container {
+    width: 63%;
+    margin: 1.8125rem auto;
+  }
+}
+
+.habits-section {
+  max-width: 100%;
+  display: flex;
+  row-gap: 2.125rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.313rem;
+}
+
+@media screen and (max-width: 575px) {
+  .habits-section {
+  flex-wrap: wrap;
+  }
+}
+
+.habits-section > h1 {
+  width: 35vw;
+  color: #000000;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 576px) {
+  .habits-section > h1 {
+    width: 100vw;
+  }
+}
+
+.habits-section > span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #343A40;
+}
+
+.habits-section > button {
+  width: 5.625rem;
+  height: 2rem;
+  background-color: #415AF3;
+  border-radius: 0.25rem;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.habits-container {
+  width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+  .habits-container {
+    border: 0.09rem #E9ECEF solid;
+    border-radius: 0.25rem;
+  }
+}
+
+.habits-header {
+  width: 100%;
+  display: flex;
+  color: #A1A1A1;
+  font-size: 1rem;
+  height: 3rem;
+  align-items: center;
+  font-weight: 500;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 576px) {
+  .list-header {
+    line-height: 2.75rem;
+    align-items: center;
+    border: 0.09rem #E9ECEF solid;
+    padding-bottom: 0;
+    border-radius: 0.25rem 0.25rem 0 0;
+  }
+}
+
+
+
+.list-habit {
+  width: 100%;
+  display: flex;
+  height: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 0.09rem solid #E9ECEF
+}
+
+.list-habit-checked {
+  background-color: #F1F3F5;
+  text-decoration: line-through;
+}
+
+@media screen and (min-width: 576px) {
+  .list-habit {
+    width: 100%;
+  }
+}
+
+.checkbox-container {
+  width: 20%;
+  text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  .checkbox-container {
+    width: 10%;
+    text-align: center;
+  }
+}
+
+.title-div {
+  display: flex;
+  justify-content: flex-start;
+  width: 60%;
+  margin-left: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 576px) {
+  .title-div {
+    width: 44%;
+  }
+}
+
+.description-div {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  .description-div {
+    display: block;
+    width: 22%;
+    margin-right: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+  }
+}
+
+.category-div {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  .category-div {
+    display: block;
+    width: 14%;
+  }
+
+  .habit-category {
+    color: #415AF3;
+    background-color: #D7E4FB;
+    padding: 1px 12px;
+    border-radius: 0.25rem;
+  }
+}
+
+.edit-div {
+  width: 20%;
+  text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  .edit-div {
+    width: 10%;
+  }
+}
+
+
+
+
+
+
+
