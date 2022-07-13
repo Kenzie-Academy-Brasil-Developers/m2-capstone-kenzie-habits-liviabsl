@@ -73,4 +73,5 @@
   border-radius: 0.25rem;
   color: #fff;
   box-shadow: 0 0 1em rgba(180, 180, 180, 0.8);
+  cursor: pointer;
 }
