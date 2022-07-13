@@ -1,6 +1,13 @@
-body {
-    background-color: black;
-    font-family: 'Inter';
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(0.2rem);
+
+
 }
 
 form {
@@ -14,8 +21,8 @@ form {
 }
 
 form div {
-    padding: 2px 0px;
-    border: 0px solid none;
+    padding: 0.125rem 0;
+    border: 0 solid none;
     border-radius: 0.3125rem;
 }
 
@@ -33,7 +40,7 @@ input {
     margin: 0;
     width: 27.375rem;
     background-color: #F1F3F5;
-    border: 2px solid #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
     border-radius: 0.25rem;
 }
 
@@ -129,8 +136,8 @@ select {
     width: 100%;
     margin: 0;
     background-color: #F1F3F5;
-    border: 2px solid #F1F3F5;
-    border-radius: 4px;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
 }
 
 .modal_status {
@@ -171,21 +178,21 @@ select {
     width: 11.9375rem;
     height: 2.5rem;
     background-color: #F1F3F5;
-    border: 2px solid #F1F3F5;
-    border-radius: 4px;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
 }
 
 .modal_buttons .modal_buttons_buttonSalvar {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 1rem;
+    line-height: 1.1875rem;
     width: 14.9375rem;
     height: 2.5rem;
     background-color: #A0ADF9;
     color: white;
-    border: 0px solid none;
-    border: 2px solid #F1F3F5;
-    border-radius: 4px;
+    border: 0 solid none;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
 }
