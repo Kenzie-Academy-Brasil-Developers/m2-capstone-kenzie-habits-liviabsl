@@ -31,12 +31,18 @@
       <!-- Primeiro Conteúdo -->
       <div class="secound_content">
           <h4 class="login">Login</h4>
-        <form class="dadosEntrada">
-          <label for="email" class="user">Usuário</label>
-          <input type="email" class="input" name="email" placeholder="Digite seu email" />
-          <label for="password" class="password">Senha</label>
-          <input type="password" class="input" name ="password" placeholder="Digite sua senha" />
-          <button class="btn_entrar">Entrar</button>
+        <form class="dataGetIn">
+          <div class="emailContainer">
+            <label for="email" class="user">Usuário</label>
+            <input type="email" class="inputLogin" name="email" placeholder="Digite seu email" />
+            <span class="spanError none">Message error</span>
+          </div>
+          <div class="passwordContainer">
+            <label for="password" class="password">Senha</label>
+            <input type="password" class="inputLogin" name ="password" placeholder="Digite sua senha" />
+            <span class="spanError none">Message error</span>
+          </div>
+          <button class="btn_getIn">Entrar</button>
         </form>
       </div>
       <!-- Segundo Conteúdo -->
