@@ -1,8 +1,27 @@
-import LoginResquest from "./login.controller.js";
+import LoginResquest from "./teste.js";
 
-console.log(
-  await LoginResquest.loginUser({
-    email: "grupo4Mia@mail.com",
-    password: "44d4465130a1c5e563057c3c4c8b88da",
-  })
-);
+export default class LoginDOM {
+  static getLogin() {
+    const botaoEntrar = document.querySelector(".btn_entrar");
+
+    botaoEntrar.addEventListener("click", async (e) => {
+      e.preventDefault();
+      const data = {};
+
+      const inputs = [...e.srcElement.form];
+      inputs.forEach((input) => {
+        if (input.value !== "") {
+          data[input.name] = input.value;
+        }
+      });
+      await LoginResquest.loginUser(data);
+
+      const userToken = JSON.parse(localStorage.getItem("@kenzie-habit:token"));
+      if (userToken !== null) {
+        window.location.href = "./src/views/modalEditarPerfil.temp.html";
+      }
+    });
+  }
+}
+
+LoginDOM.getLogin();
