@@ -18,7 +18,7 @@ export default class LoginDOM {
 
       const userToken = JSON.parse(localStorage.getItem("@kenzie-habit:token"));
       if (userToken !== null) {
-        window.location.href = "./src/views/modalEditarPerfil.temp.html";
+        window.location.href = "./src/views/homepage.index.html";
       }
     });
   }
