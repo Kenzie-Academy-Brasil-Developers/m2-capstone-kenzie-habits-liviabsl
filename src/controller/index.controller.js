@@ -1,4 +1,4 @@
-import LoginResquest from "./teste.js";
+import LoginResquest from "./login.controller.js";
 
 export default class LoginDOM {
   static getLogin() {
