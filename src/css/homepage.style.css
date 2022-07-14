@@ -1,8 +1,3 @@
-body {
-  width: 100vw;
-  height: 100vh;
-}
-
 .header-container {
   max-width: 100%;
   display: flex;
@@ -257,4 +252,192 @@ body {
   .edit-div {
     width: 7.825rem;
   }
+}
+
+.containerModalCreateHabit {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.2rem);
+}
+
+.modalCreateHabit {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 19.063rem;
+  height: 34.375rem;
+}
+
+@media screen and (min-width: 576px) {
+  .modalCreateHabit {
+    width: 31.375rem;
+  }
+}
+
+.modal-title-header {
+  margin-top: 1.4rem;
+  display: flex;
+  gap: 8.063rem;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+@media screen and (min-width: 576px) {
+  .modal-title-header {
+    gap: 19rem;
+  }
+}
+
+.modal-title-header h1 {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.closeCreateHabit {
+  cursor: pointer;
+}
+
+.modal_label {
+  padding: 0.3125rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.modal_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+}
+
+.modalCreateHabit > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleInput {
+  width: 15.313rem;
+  background-color: #f1f3f5;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 0 1rem;
+  height: 2.1875rem;
+  margin-bottom: 0.625rem;
+  border: 0.125rem solid transparent;
+  outline-color: #a0adf9;
+}
+
+@media screen and (min-width: 576px) {
+  .titleInput {
+    width: 25.1rem;
+  }
+}
+
+.modal_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 0.875rem;
+}
+
+.descriptionInput {
+  height: 4.7rem;
+  width: 15.313rem;
+  border-radius: 0.25rem;
+  outline-color: #a0adf9;
+  background-color: #f1f3f5;
+  resize: none;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.625rem;
+  border: 0.125rem solid transparent;
+}
+
+@media screen and (min-width: 576px) {
+  .descriptionInput {
+    width: 25.1rem;
+  }
+}
+
+.option_category {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 2.6rem;
+}
+
+.habit_category {
+  width: 15.313rem;
+  height: 2.1875rem;
+  box-shadow: 0, 0, 2.5rem rgba(0, 0, 0, 0.25);
+  outline: none;
+  margin-bottom: 0.625rem;
+  border-radius: 0.25rem;
+  border: 0.125rem solid transparent;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 576px) {
+  .habit_category {
+    width: 27.375rem;
+  }
+}
+
+.habit_category:focus {
+  outline: none;
+  border-color: #415af3;
+  box-shadow: 0, 0, 0.1875rem #415af3;
+}
+
+.buttonInsert {
+  font-weight: 600;
+  width: 15.313rem;
+  height: 2.5rem;
+  background-color: #a0adf9;
+  color: white;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 576px) {
+  .buttonInsert {
+    width: 27.5rem;
+  }
+}
+
+.buttonInsert:hover {
+  background-color: #4150d2;
+  border-radius: 0.25rem;
+  color: #fff;
+  box-shadow: 0 0 1em rgba(180, 180, 180, 0.8);
+  cursor: pointer;
+}
+
+.none {
+  display: none;
+}
+
+.spanError {
+  color: #d3696a;
+  font-size: 0.875rem;
+}
+
+.inputError {
+  border-color: #cf5656;
+  outline: unset;
 }
