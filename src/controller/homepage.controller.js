@@ -118,4 +118,24 @@ export default class HomepageDOM {
       container.classList.add("none");
     });
   }
+  static modalUpdateHabit() {
+    const container = document.querySelector(".container_updateHabit");
+    const spanEdit = document.querySelector(".habit-edit");
+    const close = document.querySelector(".closeUpdateProfile");
+    const btnDelete = document.querySelector(".modal_buttons_buttonDelete");
+    const btnSave = document.querySelector(".modal_buttons_buttonSave");
+
+    spanEdit.addEventListener("click", () => {
+      container.classList.remove("none");
+    });
+
+    close.addEventListener("click", () => {
+      container.classList.add("none");
+    });
+
+    btnDelete.addEventListener("click", async (e) => {
+      e.preventDefault();
+      const data = {};
+    });
+  }
 }
