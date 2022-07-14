@@ -276,17 +276,28 @@
   align-items: center;
   background-color: white;
   border-radius: 0.5rem;
-  width: 31.375rem;
+  width: 19.063rem;
   height: 34.375rem;
+}
+
+@media screen and (min-width: 576px) {
+  .modalCreateHabit {
+    width: 31.375rem;
+  }
 }
 
 .modal-title-header {
   margin-top: 1.4rem;
   display: flex;
-  flex-direction: row;
-  gap: 19rem;
+  gap: 8.063rem;
   align-items: center;
   margin-bottom: 1.2rem;
+}
+
+@media screen and (min-width: 576px) {
+  .modal-title-header {
+    gap: 19rem;
+  }
 }
 
 .modal-title-header h1 {
@@ -312,8 +323,14 @@
   margin-top: 1.5rem;
 }
 
+.modalCreateHabit > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .titleInput {
-  width: 25.1rem;
+  width: 15.313rem;
   background-color: #f1f3f5;
   border-radius: 0.25rem;
   font-size: 1rem;
@@ -322,6 +339,12 @@
   margin-bottom: 0.625rem;
   border: 0.125rem solid transparent;
   outline-color: #a0adf9;
+}
+
+@media screen and (min-width: 576px) {
+  .titleInput {
+    width: 25.1rem;
+  }
 }
 
 .modal_description {
@@ -333,13 +356,20 @@
 
 .descriptionInput {
   height: 4.7rem;
-  width: 25.1rem;
+  width: 15.313rem;
+  border-radius: 0.25rem;
   outline-color: #a0adf9;
   background-color: #f1f3f5;
   resize: none;
   padding: 0.7rem 1rem;
   margin-bottom: 0.625rem;
   border: 0.125rem solid transparent;
+}
+
+@media screen and (min-width: 576px) {
+  .descriptionInput {
+    width: 25.1rem;
+  }
 }
 
 .option_category {
@@ -350,13 +380,20 @@
 }
 
 .habit_category {
-  width: 27.375rem;
+  width: 15.313rem;
   height: 2.1875rem;
   box-shadow: 0, 0, 2.5rem rgba(0, 0, 0, 0.25);
   outline: none;
   margin-bottom: 0.625rem;
+  border-radius: 0.25rem;
   border: 0.125rem solid transparent;
   cursor: pointer;
+}
+
+@media screen and (min-width: 576px) {
+  .habit_category {
+    width: 27.375rem;
+  }
 }
 
 .habit_category:focus {
@@ -367,7 +404,7 @@
 
 .buttonInsert {
   font-weight: 600;
-  width: 27.5rem;
+  width: 15.313rem;
   height: 2.5rem;
   background-color: #a0adf9;
   color: white;
@@ -375,6 +412,12 @@
   cursor: pointer;
   transition: 0.3s ease-in-out;
   margin-top: 2rem;
+}
+
+@media screen and (min-width: 576px) {
+  .buttonInsert {
+    width: 27.5rem;
+  }
 }
 
 .buttonInsert:hover {
