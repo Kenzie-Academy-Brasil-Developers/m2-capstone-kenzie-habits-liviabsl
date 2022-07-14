@@ -54,9 +54,14 @@ export default class HomepageDOM {
       }
     });
   }
-  static modalClose() {
-    const buttonClose = document.querySelector(".close");
+  static modalCreateHabit() {
+    const buttonClose = document.querySelector(".closeCreateHabit");
     const modal = document.querySelector(".containerModalCreateHabit");
+    const buttonCreate = document.querySelector("#button-createHabit");
+
+    buttonCreate.addEventListener("click", () => {
+      modal.classList.remove("none");
+    });
     buttonClose.addEventListener("click", () => {
       modal.classList.add("none");
     });
