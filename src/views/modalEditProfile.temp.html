@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/modalEditProfile.temp.css" />
+    <title>Editar Perfil</title>
+  </head>
+  <body>
+    <section class="container_editProfile none">
+      <div class="triangulo">
+        <img src="../assets/img/Polygon 1.png" />
+      </div>
+      <div class="content_iconProfile">
+        <div class="opition">
+          <button class="btn_iconProfile">
+            <img src="../assets/img/user.png" />
+            <span>Editar perfil</span>
+          </button>
+        </div>
+        <div class="opition">
+          <button class="btn_iconProfile">
+            <img class="img_iconProfile" src="../assets/img/fechinha.png" />
+            <span>Sair do app</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container_editProfile none">
+      <div class="content_editProfile">
+        <div class="title_editProfile">
+          <h3 class="profile">Editar perfil</h3>
+          <img src="../assets/img/X.png" class="closeEditProfile" />
+        </div>
+        <form class="editProfileForm">
+          <label for="name" class="label">Nome</label>
+          <input type="text" class="input" name="usr_name"/>
+          <span class="spanError none">Message error</span>
+          <label for="image" class="label">URL da imagem do perfil</label>
+          <input type="url" class="input" name="usr_image"/>
+          <span class="spanError none">Message error</span>
+          <button class="btn_editProfile">Salvar alterações</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
