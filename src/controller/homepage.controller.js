@@ -3,6 +3,20 @@ import HabitRequest from "./habit.controller.js";
 import UserRequest from "./user.controller.js";
 
 export default class HomepageDOM {
+  static profileData() {
+    const headerContainer = document.querySelector(".header-container");
+    const userSection = document.querySelector(".user-section");
+    const userData = JSON.parse(localStorage.getItem("@kenzie-habit:response"));
+    const userIconHeader = document.createElement("img");
+    const userIconSection = document.createElement("img");
+    const userNameSection = document.createElement("p");
+    userIconHeader.src = `${userData.usr_image}`;
+    userIconSection.src = `${userData.usr_image}`;
+    userNameSection.innerText = `${userData.usr_name}`;
+    headerContainer.append(userIconHeader);
+    userSection.append(userIconSection, userNameSection);
+  }
+
   static async listHabits() {
     const habits = await HabitRequest.readAllHabits();
 
