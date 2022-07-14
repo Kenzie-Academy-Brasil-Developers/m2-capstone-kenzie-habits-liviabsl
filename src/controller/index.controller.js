@@ -2,6 +2,8 @@ import LoginResquest from "./login.controller.js";
 
 export default class LoginDOM {
   static getLogin() {
+    localStorage.removeItem("@kenzie-habit:token");
+    localStorage.removeItem("@kenzie-habit:response");
     const botaoEntrar = document.querySelector(".btn_getIn");
     const spansLogin = document.querySelectorAll(".spanError");
 
