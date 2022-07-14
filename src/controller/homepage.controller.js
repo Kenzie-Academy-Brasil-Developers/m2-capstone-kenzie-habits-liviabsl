@@ -1,6 +1,23 @@
+import Habit from "../models/habit.model.js";
 import HabitRequest from "./habit.controller.js";
 import UserRequest from "./user.controller.js";
+
 export default class HomepageDOM {
+  static async listHabits() {
+    const habits = await HabitRequest.readAllHabits();
+
+    return habits.forEach((obj) => {
+      const habit = new Habit(
+        obj.habit_id,
+        obj.habit_title,
+        obj.habit_description,
+        obj.habit_category,
+        obj.habit_status
+      );
+      habit.createCard();
+    });
+  }
+
   static createHabit() {
     const buttonInsert = document.querySelector(".buttonInsert");
     const spans = document.querySelectorAll(".spanError");
@@ -19,16 +36,19 @@ export default class HomepageDOM {
       ) {
         data[inputs[0].name] = inputs[0].value;
         data[inputs[1].name] = inputs[1].value;
-        data[inputs[2].name] = inputs[2].value.split(" ")[1];
+        data[inputs[2].name] = inputs[2].value
+          .split(" ")[1]
+          .toLocaleLowerCase();
       }
-      await HabitRequest.createHabit(data);
+      console.log(data);
+      console.log(await HabitRequest.createHabit(data));
 
       if (
         inputs[0].value != "" &&
         inputs[1].value != "" &&
         inputs[2].value != "Selecione Categoria"
       ) {
-        modal.classList.add("none");
+        window.location.reload();
       } else {
         if (inputs[0].value == "") {
           inputs[0].classList.add("inputError");
