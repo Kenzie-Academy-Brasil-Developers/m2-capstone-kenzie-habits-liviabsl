@@ -38,16 +38,33 @@ label {
 input {
     border-radius: 0.3125rem;
     margin: 0;
-    width: 27.375rem;
+    width: 26.1rem;
     background-color: #F1F3F5;
     border: 0.125rem solid #F1F3F5;
     border-radius: 0.25rem;
+    font-size :1rem;
+    padding: 0 1rem;
+}
+
+select,
+input:focus {
+    outline: none;
+    border-color: #415AF3;
+    box-shadow: 0, 0, 0.1875rem #415AF3;
 }
 
 select {
     margin: 0 auto;
     width: 27.375rem;
     height: 2.1875rem;
+    box-shadow: 0, 0, 2.5rem rgba(0, 0, 0, 0.25);
+    outline: none;
+
+}
+
+option {
+    outline: none;
+    border: 0.0625rem solid white;
 }
 
 button {
@@ -55,6 +72,7 @@ button {
     padding: 0;
     width: 11.9375rem;
     height: 2.5rem;
+    cursor: pointer;
 }
 
 .modal {
@@ -65,7 +83,7 @@ button {
 
 }
 
-.modal-titulo-header {
+.modal-title-header {
     margin-top: 1.4rem;
     display: flex;
     flex-direction: row;
@@ -75,19 +93,21 @@ button {
     margin-bottom: 1.2rem;
 }
 
-.modal-titulo-header h1 {
+.modal-title-header h1 {
     font-weight: 600;
     font-size: 1.25rem;
     line-height: 1.5rem;
 
 }
+.sair{
+    cursor: pointer;
+}
 
-
-.modal-titulo-header span {
+.modal-title-header span {
     color: #ADB5BD;
 }
 
-.modal_titulo {
+.modal_title {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -96,11 +116,11 @@ button {
 
 }
 
-.modal_titulo input {
+.modal_title input {
     height: 2.1875rem;
 }
 
-.modal_descricao {
+.modal_description {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -109,11 +129,18 @@ button {
     margin-top: 0.875rem;
 }
 
-.modal_descricao input {
+.modal_description textarea {
+    font-size: 1rem;
     height: 4.7rem;
+    width: 26.1rem;
+    outline-color: #415AF3;
+    background-color: #F1F3F5;
+    resize: none;
+    border: none;
+    padding: 0.7rem 1rem;
 }
 
-.modal_categoria {
+.option_category {
     width: 90%;
     padding: 0;
     display: flex;
@@ -123,7 +150,7 @@ button {
 
 }
 
-.modal_categoria select {
+.option_category select {
     height: 2.5rem;
     font-family: 'Inter';
     font-weight: 500;
@@ -131,14 +158,11 @@ button {
     line-height: 2rem;
 }
 
-
-select {
-    width: 100%;
-    margin: 0;
-    background-color: #F1F3F5;
-    border: 0.125rem solid #F1F3F5;
-    border-radius: 0.25rem;
+select option{
+   height:1.875rem;
 }
+
+
 
 .modal_status {
     width: 90%;
@@ -149,7 +173,7 @@ select {
 }
 
 .modal_status label {
-    font-size: 16ox;
+    font-size: 1rem;
     font-weight: 600;
     font-style: bold;
 }
@@ -168,7 +192,7 @@ select {
     font-weight: 600;
     font-size: 1rem;
     line-height: 1.1875rem;
-    margin-top: 1.875rem;
+    margin-top: 2.875rem;
 }
 
 .modal_buttons .modal_buttons_buttonExcluir {
@@ -180,10 +204,10 @@ select {
     background-color: #F1F3F5;
     border: 0.125rem solid #F1F3F5;
     border-radius: 0.25rem;
+
 }
 
 .modal_buttons .modal_buttons_buttonSalvar {
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 1rem;
@@ -192,7 +216,16 @@ select {
     height: 2.5rem;
     background-color: #A0ADF9;
     color: white;
-    border: 0 solid none;
-    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+}
+
+.modal_buttons .modal_buttons_buttonSalvar:hover {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    width: 14.9375rem;
+    height: 2.5rem;
+    background-color: #415AF3;
     border-radius: 0.25rem;
 }
