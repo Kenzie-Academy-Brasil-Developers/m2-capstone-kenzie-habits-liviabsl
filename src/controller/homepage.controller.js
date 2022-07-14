@@ -40,8 +40,7 @@ export default class HomepageDOM {
           .split(" ")[1]
           .toLocaleLowerCase();
       }
-      console.log(data);
-      console.log(await HabitRequest.createHabit(data));
+      await HabitRequest.createHabit(data);
 
       if (
         inputs[0].value != "" &&
