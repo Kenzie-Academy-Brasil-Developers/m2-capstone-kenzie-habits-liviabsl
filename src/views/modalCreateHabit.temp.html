@@ -28,11 +28,14 @@
 
                 <div class="modal_title">
                     <label>Titulo</label>
-                    <input name="habit_title" type="text" placeholder="Digitar título">
+                    <input class=" titleInput " name="habit_title" type="text" placeholder="Digitar título">
+                    <span class="spanError none">Message Error</span>
                 </div>
                 <div class="modal_description">
                     <label>Descricao</label>
-                    <textarea name="habit_description" placeholder="Digitar descrição"></textarea>
+                    <textarea class="descriptionInput " name="habit_description"
+                        placeholder="Digitar descrição"></textarea>
+                    <span class="spanError none ">Message Error</span>
                 </div>
                 <div class="option_category">
                     <label>Categoria</label>
@@ -44,6 +47,7 @@
                         <option class="option_category">📊 Trabalho</option>
                         <option class="option_category">💙 Saúde</option>
                     </select>
+                    <span class="spanError none">Message Error</span>
                 </div>
 
                 <div class="modal_buttons">
