@@ -1,4 +1,4 @@
-.container {
+.containerModalCreateHabit {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -10,17 +10,6 @@
 
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin: 0 auto;
-    align-items: center;
-    background-color: white;
-    border-radius: 0.5rem;
-}
-
-
 
 label {
     margin: 0;
@@ -29,17 +18,6 @@ label {
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.0625rem;
-}
-
-input {
-    border-radius: 0.3125rem;
-    margin: 0;
-    width: 26.1rem;
-    background-color: #F1F3F5;
-    border: 0.125rem solid #F1F3F5;
-    border-radius: 0.25rem;
-    font-size :1rem;
-    padding: 0 1rem;
 }
 
 select,
@@ -55,6 +33,8 @@ select {
     height: 2.1875rem;
     box-shadow: 0, 0, 2.5rem rgba(0, 0, 0, 0.25);
     outline: none;
+    margin-bottom: 0.625rem;
+    border: 0.125rem solid transparent;
 
 }
 
@@ -72,9 +52,17 @@ button {
 }
 
 .modal {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 0.5rem;
     margin: 0;
     width: 31.375rem;
-    height: 34.375rem;
+    height: 36.375rem;
     border-radius: 0.5rem;
 
 }
@@ -95,7 +83,8 @@ button {
     line-height: 1.5rem;
 
 }
-.sair{
+
+.close {
     cursor: pointer;
 }
 
@@ -108,12 +97,20 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 0 auto;
-    margin-top :1.5rem;
+    margin: 0;
+    margin-top: 1.5rem;
 }
 
-.modal_title input {
+.titleInput {
+
+    width: 25.1rem;
+    background-color: #F1F3F5;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    padding: 0 1rem;
     height: 2.1875rem;
+    margin-bottom: 0.625rem;
+    border: 0.125rem solid transparent;
 }
 
 .modal_description {
@@ -121,19 +118,21 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 0 auto;
     margin-top: 0.875rem;
 }
 
-.modal_description textarea {
+.descriptionInput {
+    font-family: 'Inter';
     font-size: 1rem;
     height: 4.7rem;
-    width: 26.1rem;
+    width: 25.1rem;
     outline-color: #415AF3;
     background-color: #F1F3F5;
     resize: none;
     border: none;
     padding: 0.7rem 1rem;
+    margin-bottom: 0.625rem;
+    border: 0.125rem solid transparent;
 }
 
 .option_category {
@@ -154,8 +153,8 @@ button {
     line-height: 2rem;
 }
 
-select option{
-   height:1.875rem;
+select option {
+    height: 1.875rem;
 }
 
 .modal_buttons {
@@ -166,24 +165,24 @@ select option{
     font-weight: 600;
     font-size: 1rem;
     line-height: 1.1875rem;
-    margin-top: 4.875rem;
+    margin-top: 1.875rem;
 }
 
 
 
-.modal_buttons_buttonSalvar {
+.buttonInsert {
     font-style: normal;
     font-weight: 600;
     font-size: 1rem;
     line-height: 1.1875rem;
-    width: 26.1rem;
+    width: 27.5rem;
     height: 2.5rem;
     background-color: #A0ADF9;
     color: white;
     border-radius: 0.25rem;
 }
 
-.modal_buttons .modal_buttons_buttonSalvar:hover {
+.modal_buttons .buttonInsert:hover {
     font-style: normal;
     font-weight: 600;
     font-size: 1rem;
@@ -191,4 +190,20 @@ select option{
     height: 2.5rem;
     background-color: #415AF3;
     border-radius: 0.25rem;
+}
+
+.none {
+    display: none;
+}
+
+.spanError {
+    color: rgba(211, 105, 106, 1);
+    font-size: 0.875rem;
+}
+
+.inputError {
+    border-color: #cf5656;
+    outline-color: unset;
+    border-radius: 0.25rem;
+
 }
