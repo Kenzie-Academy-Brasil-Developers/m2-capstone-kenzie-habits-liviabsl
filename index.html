@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./src/assets/img/list-check-solid.svg"
+      type="image/x-icon"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+
+    <title>Kenzie Habit</title>
+  </head>
+
+  <body>
+    <section class="container">
+      <div class="first_content">
+        <h2 class="title">KenzieHabit</h2>
+        <p class="descripition">
+          If you are going to use a <span id="passage">passage</span> of Lorem
+          Ipsum
+        </p>
+        <span class="span">you need to be sure there isn't anything</span>
+      </div>
+      <div class="secound_content">
+        <h4 class="login">Login</h4>
+        <form class="dataGetIn">
+          <div class="emailContainer">
+            <label for="email" class="user">Usuário</label>
+            <input
+              type="email"
+              class="inputLogin"
+              name="email"
+              placeholder="Digite seu email"
+            />
+            <span class="spanError none">Message error</span>
+          </div>
+          <div class="passwordContainer">
+            <label for="password" class="password">Senha</label>
+            <input
+              type="password"
+              class="inputLogin"
+              name="password"
+              placeholder="Digite sua senha"
+            />
+            <span class="spanError none">Message error</span>
+          </div>
+          <button class="btn_getIn">Entrar</button>
+        </form>
+      </div>
+    </section>
+    <script type="module" src="./src/scripts/index.script.js"></script>
+  </body>
+</html>

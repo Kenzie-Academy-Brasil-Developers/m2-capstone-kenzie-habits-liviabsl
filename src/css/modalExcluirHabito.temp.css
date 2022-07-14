@@ -1,0 +1,118 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(0.2rem);
+
+
+}
+
+.modal {
+    width: 31.375rem;
+    height: 21.02rem;
+    background-color: #FFFFFF;
+    border-radius: 0.5rem;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    width: 11.9375rem;
+    height: 2.5rem;
+    cursor: pointer;
+}
+
+
+.modal-title-header {
+    margin: 0 auto;
+    margin-top: 1.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 1.2rem;
+}
+
+.modal-title-header h1 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+
+.sair {
+    cursor: pointer;
+}
+
+
+.modal-title-header span {
+    color: #ADB5BD;
+}
+
+.textContent {
+    margin-top: 2rem;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 4.313rem;
+}
+
+.textContent .textContent_question {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: #000000;
+}
+
+.textContent .textContent_info {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+.modal_buttons {
+    margin: 0 auto;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    gap: 0.5rem;
+    color: #343A40;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    margin-top: 4rem;
+}
+
+.modal_buttons .modal_buttons_buttonExcluir {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    width: 11.9375rem;
+    height: 2.5rem;
+    background-color: #F1F3F5;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+}
+
+.modal_buttons .modal_buttons_buttonSalvar {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    width: 14.9375rem;
+    height: 2.5rem;
+    background-color: rgba(230, 68, 69, 0.7);
+    color: white;
+    border: 0 solid none;
+    border: 0.125rem solid #F1F3F5;
+    border-radius: 0.25rem;
+}
+
+.modal_buttons_buttonSalvar:hover {
+    background-color: rgba(230, 68, 69, 1);
+}
