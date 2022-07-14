@@ -1,4 +1,4 @@
-.container {
+.container_editProfile {
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -101,6 +101,8 @@
   background-color: #f1f3f5;
   margin-bottom: 1.5rem;
   outline-color: #a0adf9;
+  border: 0.125rem solid transparent;
+  border-radius: 0.25rem;
 }
 
 .btn_editProfile {
@@ -123,4 +125,14 @@
 
 .none {
   display: none;
+}
+
+.spanError {
+  color: #d3696a;
+  font-size: 0.875rem;
+}
+
+.inputError {
+  border-color: #d3696a;
+  outline: unset;
 }

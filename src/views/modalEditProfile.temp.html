@@ -9,7 +9,7 @@
     <title>Editar Perfil</title>
   </head>
   <body>
-    <section class="container">
+    <section class="container_editProfile none">
       <div class="triangulo">
         <img src="../assets/img/Polygon 1.png" />
       </div>
@@ -29,7 +29,7 @@
       </div>
     </section>
 
-    <section class="container">
+    <section class="container_editProfile none">
       <div class="content_editProfile">
         <div class="title_editProfile">
           <h3 class="profile">Editar perfil</h3>
@@ -37,9 +37,11 @@
         </div>
         <form class="editProfileForm">
           <label for="name" class="label">Nome</label>
-          <input type="text" class="input" />
+          <input type="text" class="input" name="usr_name"/>
+          <span class="spanError none">Message error</span>
           <label for="image" class="label">URL da imagem do perfil</label>
-          <input type="url" class="input" />
+          <input type="url" class="input" name="usr_image"/>
+          <span class="spanError none">Message error</span>
           <button class="btn_editProfile">Salvar alterações</button>
         </form>
       </div>
