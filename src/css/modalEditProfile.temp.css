@@ -1,12 +1,57 @@
 .container {
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
   background-color: #ecf0f1;
 }
 
-.first_content {
+.triangulo {
+  position: absolute;
+  margin-bottom: 8.0625rem;
+  margin-left: 14.0625rem;
+}
+
+.content_iconProfile {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 40px 0px #00000040;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  width: 15.375rem;
+  height: 7.75rem;
+}
+
+.opition {
+  margin-bottom: 0.75rem;
+  margin-top: 1.5rem;
+  margin-left: 3.75rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 14.375rem;
+  height: 2.75rem;
+}
+
+.btn_iconProfile {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  background-color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.img_iconProfile {
+  height: 0.985rem;
+}
+
+.content_editProfile {
   display: flex;
   flex-direction: column;
   width: 31.375rem;
@@ -15,7 +60,7 @@
   border-radius: 0.5rem;
 }
 
-.title-img {
+.title_editProfile {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -24,18 +69,18 @@
   margin-top: 2.375rem;
 }
 
-.profile {
+.title_editProfile > .profile {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-.close {
+.closeEditProfile {
   width: 0.7rem;
   height: 0.7rem;
   cursor: pointer;
 }
 
-.editarPerfilFomulario {
+.editProfileForm {
   display: flex;
   flex-direction: column;
   margin-top: 2.3125rem;
@@ -58,7 +103,7 @@
   outline-color: #a0adf9;
 }
 
-.btn {
+.btn_editProfile {
   width: 27.375rem;
   height: 2.5rem;
   padding: 12px, 50px, 12px, 50px;
@@ -68,10 +113,14 @@
   transition: 0.3s ease-in-out;
 }
 
-.btn:hover {
+.btn_editProfile:hover {
   background-color: #4150d2;
   border-radius: 0.25rem;
   color: #fff;
   box-shadow: 0 0 1em rgba(180, 180, 180, 0.8);
   cursor: pointer;
+}
+
+.none {
+  display: none;
 }
