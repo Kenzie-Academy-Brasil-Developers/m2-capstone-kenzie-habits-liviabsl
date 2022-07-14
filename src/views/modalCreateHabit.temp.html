@@ -18,44 +18,45 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="containerModalCreateHabit">
         <div class="modal">
-
+            <div class="modal-title-header">
+                <h1> Criar Hábito</h1>
+                <img class="close" src="../assets/img/X.png" alt="" srcset="">
+            </div>
             <form>
-                <div class="modal-title-header">
-                    <h1> Criar Hábito</h1>
-                    <img class="sair" src="../assets/img/X.png" alt="" srcset="">
-                </div>
+
                 <div class="modal_title">
                     <label>Titulo</label>
-                    <input type="text" placeholder="Digitar título">
+                    <input name="habit_title" type="text" placeholder="Digitar título">
                 </div>
                 <div class="modal_description">
                     <label>Descricao</label>
-                    <textarea name="description" id="Digitar descrição" ></textarea>
+                    <textarea name="habit_description" placeholder="Digitar descrição"></textarea>
                 </div>
                 <div class="option_category">
                     <label>Categoria</label>
-                    <select>
+                    <select name="habit_category">
                         <option disabled selected>Selecione Categoria</option>
                         <option class="option_category"> 👤 Casa</option>
-                        <option class="option_category" >📘 Estudo </option>
-                        <option class="option_category" >🍃 Lazer</option>
-                        <option class="option_category" >📊 Trabalho</option>
-                        <option class="option_category" >💙 Saúde</option>
+                        <option class="option_category">📘 Estudo </option>
+                        <option class="option_category">🍃 Lazer</option>
+                        <option class="option_category">📊 Trabalho</option>
+                        <option class="option_category">💙 Saúde</option>
                     </select>
                 </div>
 
                 <div class="modal_buttons">
 
-                
-                    <button class="modal_buttons_buttonSalvar">Inserir</button>
+
+                    <button class="buttonInsert">Inserir</button>
                 </div>
 
             </form>
         </div>
     </div>
 
+    <script type="module" src="../scripts/homepage.script.js"></script>
 
 </body>
 
