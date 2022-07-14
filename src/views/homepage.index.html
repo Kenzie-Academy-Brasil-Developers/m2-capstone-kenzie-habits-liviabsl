@@ -28,7 +28,7 @@
         <h1>Tarefas</h1>
         <span id="all-habits-filter">Todos</span>
         <span id="checked-habits-filter">Concluídos</span>
-        <button>Criar</button>
+        <button id="button-createHabit">Criar</button>
       </section>
       <section>
         <ul class="habits-container">
@@ -94,6 +94,55 @@
         </ul>
       </section>
     </main>
+
+    <div class="containerModalCreateHabit none">
+      <div class="modalCreateHabit">
+        <div class="modal-title-header">
+          <h1>Criar Hábito</h1>
+          <img
+            class="closeCreateHabit"
+            src="../assets/img/X.png"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <form>
+          <div class="modal_title">
+            <label class="modal_label">Titulo</label>
+            <input
+              class="titleInput"
+              name="habit_title"
+              type="text"
+              placeholder="Digitar título"
+            />
+            <span class="spanError none">Message Error</span>
+          </div>
+          <div class="modal_description">
+            <label class="modal_label">Descricao</label>
+            <textarea
+              class="descriptionInput"
+              name="habit_description"
+              placeholder="Digitar descrição"
+            ></textarea>
+            <span class="spanError none">Message Error</span>
+          </div>
+          <div class="option_category">
+            <label class="modal_label">Categoria</label>
+            <select name="habit_category" class="habit_category">
+              <option disabled selected>Selecione Categoria</option>
+              <option class="option_category">👤 Casa</option>
+              <option class="option_category">📘 Estudo</option>
+              <option class="option_category">🍃 Lazer</option>
+              <option class="option_category">📊 Trabalho</option>
+              <option class="option_category">💙 Saúde</option>
+            </select>
+            <span class="spanError none">Message Error</span>
+          </div>
+
+          <button class="buttonInsert">Inserir</button>
+        </form>
+      </div>
+    </div>
 
     <script type="module" src="../scripts/homepage.script.js"></script>
   </body>
