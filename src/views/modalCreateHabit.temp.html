@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/modalCreateHabit.temp.css">
+
+    <title>Criar Habit</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="modal">
+
+            <form>
+                <div class="modal-title-header">
+                    <h1> Criar Hábito</h1>
+                    <img class="sair" src="../assets/img/X.png" alt="" srcset="">
+                </div>
+                <div class="modal_title">
+                    <label>Titulo</label>
+                    <input type="text" placeholder="Digitar título">
+                </div>
+                <div class="modal_description">
+                    <label>Descricao</label>
+                    <textarea name="description" id="Digitar descrição" ></textarea>
+                </div>
+                <div class="option_category">
+                    <label>Categoria</label>
+                    <select>
+                        <option disabled selected>Selecione Categoria</option>
+                        <option class="option_category"> 👤 Casa</option>
+                        <option class="option_category" >📘 Estudo </option>
+                        <option class="option_category" >🍃 Lazer</option>
+                        <option class="option_category" >📊 Trabalho</option>
+                        <option class="option_category" >💙 Saúde</option>
+                    </select>
+                </div>
+
+                <div class="modal_buttons">
+
+                
+                    <button class="modal_buttons_buttonSalvar">Inserir</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
