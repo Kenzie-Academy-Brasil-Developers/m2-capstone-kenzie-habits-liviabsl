@@ -6,13 +6,23 @@ export default class HomepageDOM {
   static profileData() {
     const headerContainer = document.querySelector(".header-container");
     const userSection = document.querySelector(".user-section");
-    const userData = JSON.parse(localStorage.getItem("@kenzie-habit:response"));
+    const editIconProfile = document.querySelector(
+      ".container_editIconProfile"
+    );
     const userIconHeader = document.createElement("img");
     const userIconSection = document.createElement("img");
     const userNameSection = document.createElement("p");
+
+    const userData = JSON.parse(localStorage.getItem("@kenzie-habit:response"));
+
     userIconHeader.src = `${userData.usr_image}`;
     userIconSection.src = `${userData.usr_image}`;
     userNameSection.innerText = `${userData.usr_name}`;
+
+    userIconHeader.addEventListener("click", () => {
+      editIconProfile.classList.toggle("none");
+    });
+
     headerContainer.append(userIconHeader);
     userSection.append(userIconSection, userNameSection);
   }
@@ -35,7 +45,6 @@ export default class HomepageDOM {
   static createHabit() {
     const buttonInsert = document.querySelector(".buttonInsert");
     const spans = document.querySelectorAll(".spanError");
-    const modal = document.querySelector(".containerModalCreateHabit");
 
     buttonInsert.addEventListener("click", async (e) => {
       e.preventDefault();
@@ -101,25 +110,29 @@ export default class HomepageDOM {
   }
 
   static modalIconProfile() {
-    const buttonIcon = document.querySelectorAll(".btn_iconProfile");
-    const container = document.querySelectorAll(".container_editProfile");
-    buttonIcon[0].addEventListener(() => {
-      container[0].classList.add("none");
-      container[1].classList.remove("none");
+    const buttonIcon = document.querySelector("#btn_editIconProfile");
+    const buttonLogout = document.querySelector("#btn_editProfile");
+    const containerIconProfile = document.querySelector(
+      ".container_editIconProfile"
+    );
+    const containerEditProfile = document.querySelector(
+      ".container_editProfile"
+    );
+    buttonIcon.addEventListener("click", () => {
+      containerIconProfile.classList.add("none");
+      containerEditProfile.classList.remove("none");
     });
-    buttonIcon[1].addEventListener(() => {
+    buttonLogout.addEventListener("click", () => {
       localStorage.removeItem("@kenzie-habit:token");
       localStorage.removeItem("@kenzie-habit:response");
-      window.location.href = ".../index.html";
+      window.location.href = "/index.html";
     });
   }
-
   static updateProfile() {
     const buttonEdit = document.querySelector(".btn_editProfile");
-    const container = document.querySelectorAll(".container_editProfile")[1];
     const spans = document.querySelectorAll(".spanError");
 
-    buttonEdit.addEventListener(async (e) => {
+    buttonEdit.addEventListener("click", async (e) => {
       e.preventDefault();
       const data = {};
       const inputs = [...e.srcElement.form];
@@ -128,11 +141,16 @@ export default class HomepageDOM {
           data[input.name] = input.value;
         }
       });
+      const response = await UserRequest.updateProfile(data);
 
-      await UserRequest.updateProfile(data);
+      localStorage.removeItem("@kenzie-habit:response");
+      localStorage.setItem(
+        "@kenzie-habit:response",
+        JSON.stringify({ ...response })
+      );
 
-      if (inputs[0].value !== "" && inputs[1].value !== "") {
-        container.classList.add("none");
+      if (inputs[0].value !== "" || inputs[1].value !== "") {
+        window.location.reload();
       } else {
         spans.forEach((span) => {
           span.classList.remove("none");
@@ -145,7 +163,7 @@ export default class HomepageDOM {
 
   static modalCloseProfile() {
     const btn = document.querySelector(".closeEditProfile");
-    const container = document.querySelectorAll(".container_editProfile")[1];
+    const container = document.querySelector(".container_editProfile");
 
     btn.addEventListener("click", () => {
       container.classList.add("none");
