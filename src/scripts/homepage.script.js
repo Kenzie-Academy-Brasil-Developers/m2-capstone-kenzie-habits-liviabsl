@@ -1,8 +1,7 @@
 import HomepageDOM from "../controller/homepage.controller.js";
 
-console.log(await HomepageDOM.listHabits());
+await HomepageDOM.listHabits();
+HomepageDOM.profileData();
 HomepageDOM.createHabit();
-HomepageDOM.modalCreateHabit();
 HomepageDOM.modalIconProfile();
 HomepageDOM.updateProfile();
-HomepageDOM.modalCloseProfile();

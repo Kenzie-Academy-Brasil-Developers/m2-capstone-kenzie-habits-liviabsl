@@ -15,13 +15,9 @@
   <body>
     <header class="header-container">
       <p>KenzieHabit</p>
-      <img src="../assets/img/user.png" alt="User image" />
     </header>
 
-    <section class="user-section">
-      <img src="../assets/img/user.png" alt="User image" />
-      <p>Username</p>
-    </section>
+    <section class="user-section"></section>
 
     <main class="main-container">
       <section class="habits-section">
@@ -102,6 +98,119 @@
       </div>
     </div>
 
+    <section class="container_editIconProfile none">
+      <div class="triangulo">
+        <img src="../assets/img/Polygon 1.png" />
+      </div>
+      <div class="content_iconProfile">
+        <div class="opition">
+          <button class="btn_iconProfile" id="btn_editIconProfile">
+            <img src="../assets/img/user.png" />
+            <span>Editar perfil</span>
+          </button>
+        </div>
+        <div class="opition">
+          <button class="btn_iconProfile" id="btn_editProfile">
+            <img class="img_iconProfile" src="../assets/img/fechinha.png" />
+            <span>Sair do app</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container_editProfile none">
+      <div class="content_editProfile">
+        <div class="title_editProfile">
+          <h3 class="profile">Editar perfil</h3>
+          <img src="../assets/img/X.png" class="closeEditProfile" />
+        </div>
+        <form class="editProfileForm">
+          <label for="name" class="label">Nome</label>
+          <input type="text" class="input" name="usr_name" />
+          <span class="spanError none">Message error</span>
+          <label for="image" class="label">URL da imagem do perfil</label>
+          <input type="url" class="input" name="usr_image" />
+          <span class="spanError none">Message error</span>
+          <button class="btn_editProfile">Salvar alterações</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="containerModalCreateHabit none" id="container_editHabit">
+      <div class="modalCreateHabit">
+        <form class="form-edit-habit">
+          <div class="modal-title-header">
+            <h1>Editar Hábito</h1>
+            <img
+              class="closeCreateHabit"
+              id="closeEditHabit"
+              src="../assets/img/X.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="modal_title">
+            <label class="label_editHabit">Título</label>
+            <input class="titleInput" type="text" placeholder="" />
+          </div>
+          <div class="modal_description">
+            <label class="label_editHabit">Descrição</label>
+            <textarea
+              class="descriptionInput"
+              name="description"
+              id=""
+            ></textarea>
+          </div>
+          <div class="option_category">
+            <label class="label_editHabit">Categoria</label>
+            <select class="habit_category">
+              <option class="option_category">👤 Casa</option>
+              <option class="option_category">📘 Estudos</option>
+              <option class="option_category">🍃 Lazer</option>
+              <option class="option_category">📊 Trabalho</option>
+              <option class="option_category">💙 Saude</option>
+            </select>
+          </div>
+          <div class="modal_status">
+            <label class="label_editHabit">Status</label>
+            <input class="inputCheck" type="checkbox" />
+          </div>
+          <div class="modal_buttons">
+            <button class="buttonEditProfileDelete">Excluir</button>
+            <button class="buttonEditProfileInsert">Salvar alterações</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container_deleteHabit none">
+      <div class="modal">
+        <form>
+          <div class="modalHeader">
+            <h1>Excluir Hábito</h1>
+            <img
+              class="modalCloseDelete"
+              src="../assets/img/X.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <p></p>
+          <div class="textContentDelete">
+            <p class="textContentDelete_question">
+              Certeza que deseja excluir este hábito?
+            </p>
+            <p class="textContentDelete_info">
+              Após executar essa ação não será possível desfazer
+            </p>
+          </div>
+          <div class="modal_buttonsDelete">
+            <button class="buttonCancel">Cancelar</button>
+            <button class="buttonDelete">Sim, excluir este hábito</button>
+          </div>
+        </form>
+      </div>
+    </div>
     <script type="module" src="../scripts/homepage.script.js"></script>
   </body>
 </html>
