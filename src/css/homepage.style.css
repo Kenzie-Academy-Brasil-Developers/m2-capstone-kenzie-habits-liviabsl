@@ -708,10 +708,16 @@
 }
 
 .modal {
-  width: 31.375rem;
+  width: 19.063rem;
   height: 21.02rem;
   background-color: #ffffff;
   border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 576px) {
+  .modal {
+    width: 31.375rem
+  }
 }
 
 .modalHeader {
