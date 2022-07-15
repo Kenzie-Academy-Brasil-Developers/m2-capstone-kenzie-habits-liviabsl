@@ -187,11 +187,12 @@ export default class HomepageDOM {
   static async editHabit(habit_id) {
     const habit = await HabitRequest.readAllHabits();
     const habitFind = habit.find(({ habit_id }) => habit_id);
+    const buttonInsert = document.querySelector(".buttonEditProfileInsert");
 
     const inputTitle = document.querySelector(".titleInput");
     const inputDescription = document.querySelector(".descriptionInput");
     const inputCategory = document.querySelector(".habit_category");
-
+    buttonInsert.addEventListener("click", (e) => e.preventDefault());
     this.deleteHabit(habit_id);
   }
 
