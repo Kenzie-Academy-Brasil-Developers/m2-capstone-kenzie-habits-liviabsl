@@ -9,6 +9,8 @@ export default class HomepageDOM {
     const editIconProfile = document.querySelector(
       ".container_editIconProfile"
     );
+    const btnEditHabit = document.querySelectorAll(".habit-edit");
+    const editHabit = document.querySelector("#container_editHabit");
     const userIconHeader = document.createElement("img");
     const userIconSection = document.createElement("img");
     const userNameSection = document.createElement("p");
@@ -21,6 +23,14 @@ export default class HomepageDOM {
 
     userIconHeader.addEventListener("click", () => {
       editIconProfile.classList.toggle("none");
+    });
+
+    btnEditHabit.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        editHabit.classList.remove("none");
+        this.editHabit(btn.id);
+        this.modalCloseEditHabit();
+      });
     });
 
     headerContainer.append(userIconHeader);
@@ -95,8 +105,10 @@ export default class HomepageDOM {
         }
       }
     });
+    this.modalCloseCreateHabit();
   }
-  static modalCreateHabit() {
+
+  static modalCloseCreateHabit() {
     const buttonClose = document.querySelector(".closeCreateHabit");
     const modal = document.querySelector(".containerModalCreateHabit");
     const buttonCreate = document.querySelector("#button-createHabit");
@@ -128,6 +140,7 @@ export default class HomepageDOM {
       window.location.href = "/index.html";
     });
   }
+
   static updateProfile() {
     const buttonEdit = document.querySelector(".btn_editProfile");
     const spans = document.querySelectorAll(".spanError");
@@ -159,6 +172,7 @@ export default class HomepageDOM {
         inputs[1].classList.add("inputError");
       }
     });
+    this.modalCloseProfile();
   }
 
   static modalCloseProfile() {
@@ -167,6 +181,62 @@ export default class HomepageDOM {
 
     btn.addEventListener("click", () => {
       container.classList.add("none");
+    });
+  }
+
+  static async editHabit(habit_id) {
+    const habit = await HabitRequest.readAllHabits();
+    const habitFind = habit.find(({ habit_id }) => habit_id);
+
+    const inputTitle = document.querySelector(".titleInput");
+    const inputDescription = document.querySelector(".descriptionInput");
+    const inputCategory = document.querySelector(".habit_category");
+
+    this.deleteHabit(habit_id);
+  }
+
+  static modalCloseEditHabit() {
+    const btnClose = document.querySelector("#closeEditHabit");
+    const editHabit = document.querySelector("#container_editHabit");
+    const btnDelete = document.querySelector(".buttonEditProfileDelete");
+    const deleteHabit = document.querySelector(".container_deleteHabit");
+
+    btnClose.addEventListener("click", () => {
+      editHabit.classList.add("none");
+    });
+
+    btnDelete.addEventListener("click", (e) => {
+      e.preventDefault();
+      editHabit.classList.add("none");
+      deleteHabit.classList.remove("none");
+    });
+  }
+
+  static deleteHabit(habit_id) {
+    const btnDelete = document.querySelector(".buttonDelete");
+    const btnCancel = document.querySelector(".buttonCancel");
+    const deleteHabit = document.querySelector(".container_deleteHabit");
+    const editHabit = document.querySelector("#container_editHabit");
+
+    btnDelete.addEventListener("click", async (e) => {
+      e.preventDefault();
+      await HabitRequest.deleteHabit(habit_id);
+      window.location.reload();
+    });
+
+    btnCancel.addEventListener("click", (e) => {
+      e.preventDefault();
+      editHabit.classList.remove("none");
+      deleteHabit.classList.add("none");
+    });
+    this.modalCoseDeleteHabit();
+  }
+  static modalCoseDeleteHabit() {
+    const modalClose = document.querySelector(".modalCloseDelete");
+    const deleteHabit = document.querySelector(".container_deleteHabit");
+
+    modalClose.addEventListener("click", () => {
+      deleteHabit.classList.add("none");
     });
   }
 }

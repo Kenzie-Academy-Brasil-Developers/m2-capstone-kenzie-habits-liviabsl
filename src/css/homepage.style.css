@@ -388,6 +388,7 @@
   border-radius: 0.25rem;
   border: 0.125rem solid transparent;
   cursor: pointer;
+  background-color: #f1f3f5;
 }
 
 @media screen and (min-width: 576px) {
@@ -426,10 +427,6 @@
   color: #fff;
   box-shadow: 0 0 1em rgba(180, 180, 180, 0.8);
   cursor: pointer;
-}
-
-.none {
-  display: none;
 }
 
 .container_editIconProfile {
@@ -555,9 +552,6 @@
   box-shadow: 0 0 1em rgba(180, 180, 180, 0.8);
   cursor: pointer;
 }
-.none {
-  display: none;
-}
 
 @media only screen and (min-width: 768px) {
   .container_editIconProfile {
@@ -625,6 +619,191 @@
   }
 }
 
+.modal_status {
+  width: 16.625rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 576px) {
+  .modal_status {
+    width: 90%;
+  }
+}
+.label_editHabit {
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: bold;
+  margin-bottom: 0.3rem;
+}
+.modal_status .inputCheck {
+  width: 1.0625rem;
+  height: 0.9375rem;
+  cursor: pointer;
+}
+.modal_buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  color: #343a40;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  margin-top: 2rem;
+}
+.buttonEditProfileDelete {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 6.9375rem;
+  height: 2.5rem;
+  background-color: #f1f3f5;
+  border: 0.125rem solid #f1f3f5;
+  border-radius: 0.25rem;
+}
+@media screen and (min-width: 576px) {
+  .buttonEditProfileDelete {
+    width: 11.9375rem;
+    cursor: pointer;
+  }
+}
+.modal_buttons_buttonSalvar {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  width: 9.9375rem;
+  height: 2.5rem;
+  background-color: #a0adf9;
+  color: white;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+@media screen and (min-width: 576px) {
+  .modal_buttons_buttonSalvar {
+    width: 14.9375rem;
+  }
+}
+.modal_buttons_buttonSalvar:hover {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  height: 2.5rem;
+  background-color: #415af3;
+  border-radius: 0.25rem;
+}
+
+.container_deleteHabit {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.2rem);
+}
+
+.modal {
+  width: 31.375rem;
+  height: 21.02rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+}
+
+.modalHeader {
+  margin: 0 auto;
+  margin-top: 1.4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-bottom: 1.2rem;
+}
+
+.modalHeader h1 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.modalCloseDelete {
+  cursor: pointer;
+}
+
+.modalHeader span {
+  color: #adb5bd;
+}
+
+.textContentDelete {
+  margin-top: 2rem;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 4.313rem;
+}
+
+.textContentDelete_question {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #000000;
+}
+
+.textContentDelete_info {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.modal_buttonsDelete {
+  margin: 0 auto;
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  gap: 0.5rem;
+  color: #343a40;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  margin-top: 4rem;
+}
+
+.buttonCancel {
+  font-weight: 600;
+  font-size: 1rem;
+  width: 11.9375rem;
+  height: 2.5rem;
+  background-color: #f1f3f5;
+  border: 0.125rem solid #f1f3f5;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.buttonDelete {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  width: 14.9375rem;
+  height: 2.5rem;
+  background-color: rgba(230, 68, 69, 0.7);
+  color: white;
+  border: 0 solid none;
+  border: 0.125rem solid #f1f3f5;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.buttonDelete:hover {
+  background-color: rgba(230, 68, 69, 1);
+}
+
 .spanError {
   color: #d3696a;
   font-size: 0.875rem;
@@ -634,4 +813,8 @@
 .inputError {
   border-color: #cf5656;
   outline: unset;
+}
+
+.none {
+  display: none;
 }

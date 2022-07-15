@@ -51,10 +51,10 @@ export default class Habit {
 
     edit_div.classList.add("edit-div");
     habit_edit.classList.add("habit-edit");
+    habit_edit.id = this.habit_id;
 
     img.src = "../assets/img/edit-option.png";
     img.alt = this.habit_title;
-    img.id = this.habit_id;
 
     if (this.habit_status) {
       input.checked = true;
